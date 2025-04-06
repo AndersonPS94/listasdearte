@@ -25,25 +25,31 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.devspacecomposeinit.ui.theme.ComposeInitTheme
 
 
 @Composable
-fun ArtistListScreen( ) {
+fun ArtistListScreen(navController: NavController) {
     val repository = ListRepository()
     val artists = repository.getArtistsList()
 
-    ArtistList(artists)
+    ArtistList(artists){
+        navController.navigate("artistDetail/${it.id}")
+    }
 }
 
 @Composable
-private fun ArtistList(artists: List<Artist>) {
+private fun ArtistList(
+    artists: List<Artist>,
+    onClick: (Artist) -> Unit
+    ) {
     LazyColumn {
         items(artists.size) {
             ArtistCard(
                 artist = artists[it],
                 onClick = {
-                    println("Artist ${artists[it].name} clicked")
+                    onClick.invoke(artists[it])
                 }
             )
         }
@@ -51,10 +57,10 @@ private fun ArtistList(artists: List<Artist>) {
 }
 
 @Composable
-private fun ArtistCard (
+     fun ArtistCard (
     artist: Artist,
     onClick: () -> Unit
-){
+    ){
     Column (
         modifier = Modifier.padding(8.dp)
             .clickable (onClick = onClick)
