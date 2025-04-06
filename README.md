@@ -1,20 +1,48 @@
-# Artist List
-Esse projeto é um aplicativo Android nativo desenvolvido com a lingagem de programação Kotlin, criado para aprender princípios básicos da nova UI toolkit Compose.
+# 🎨 Artist List
 
-## :camera_flash: Screenshots
-<!-- You can add more screenshots here if you like -->
-<img src="https://github.com/ComunidadeDevSpace/ComposeInit/assets/11612508/4def44a9-b377-4e9c-b3b7-19cec8599e6d" width=260/>
+Aplicativo Android nativo desenvolvido com **Kotlin** e **Jetpack Compose**, com o objetivo de praticar os princípios básicos da nova toolkit de UI declarativa do Android.
 
-## Tecnologias
-- 100% Kotlin
-- Compose
-  - Column
-  - Row
-  - Image
-  - Modifier
-  - Spacer
-  - LazyColumn
-  - ComposePreview
+---
+
+## 📱 Screenshots
+
+
+
+<img src="https://github.com/user-attachments/assets/ce5f2225-67ea-492d-8e0f-8104f7fb3d4e" width="260"/>
+<img src="https://github.com/user-attachments/assets/63aa4e8d-bcb0-41ca-bf4e-189e46a1c4c4" width="260"/>
+
+
+---
+
+## 🚀 Tecnologias e Recursos
+
+- **Linguagem:** Kotlin  
+- **UI:** Jetpack Compose  
+  - `Column`, `Row`  
+  - `Image`, `Spacer`  
+  - `Modifier`  
+  - `LazyColumn`  
+  - `@Preview` para visualização de componentes
+
+---
+
+## 📚 Aprendizados
+
+Este projeto foi criado com foco no aprendizado prático de:
+- Estrutura básica de um app com Compose
+- Organização de layouts usando `Column` e `Row`
+- Exibição de listas com `LazyColumn`
+- Uso de componentes como `Spacer` e `Modifier` para personalização de layout
+- Visualização de UI com `@Preview`
+
+---
+
+## 🛠️ Como executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/artist-list.git
+
 
 ## License
 ```
